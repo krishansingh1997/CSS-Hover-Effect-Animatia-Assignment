@@ -22,6 +22,8 @@
             box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
+            float: left;
+            margin: 12px;
         }
 
         .overlay {
@@ -30,7 +32,7 @@
             top: -212px;
             left: 0px;
             transition-property: all;
-            transition-duration: 0.3s;
+            transition-duration: 0.4s;
             transition-timing-function: ease-in-out;
         }
 
@@ -65,6 +67,38 @@
             left: 140px !important;
 
         }
+
+        .overlay5 {
+            top: 0px;
+            opacity: 0;
+            transition-duration: 0.2s;
+        }
+
+        .box:hover>.overlay5 {
+            opacity: 1;
+        }
+
+        .a5_1 {
+            left: 50px !important;
+        }
+
+        .a5_2 {
+            left: 180px !important;
+        }
+
+        .box:hover>.overlay5 .a5_1 {
+            left: 90px !important;
+        }
+
+        .box:hover>.overlay5 .a5_2 {
+            left: 140px !important;
+        }
+
+        .a5_1,
+        .a5_2 {
+            /* transition: property duration timing-function delay|initial|inherit*/
+            transition: all 0.1s liner;
+        }
     </style>
 </head>
 
@@ -72,9 +106,15 @@
 
 </body>
 <div class="common box">
-    <div class="common overlay">
+    <div class="common overlay ">
         <a href="#"><i class="fa-solid fa-link"></i></a>
         <a class="banchor" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+    </div>
+</div>
+<div class="common box">
+    <div class="common overlay overlay5">
+        <a href="#" class="a5_1"><i class="fa-solid fa-link"></i></a>
+        <a class="banchor a5_2" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
     </div>
 </div>
 
