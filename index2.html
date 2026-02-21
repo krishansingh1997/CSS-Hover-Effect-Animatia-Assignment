@@ -1,121 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<bo lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS HOVER EFFECT - Animation Assignments</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        .common {
-            width: 280px;
-            height: 212px;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS HOVER EFFECT - Animation Assignments</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            .common {
+                width: 280px;
+                height: 212px;
+            }
 
-        .box {
-            background: red;
-            background-image: url(./img/1.png);
-            background-size: cover;
-            /* box-shadow: x y b s c; */
-            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
-            float: left;
-            margin: 12px;
-        }
+            .box {
+                background: red;
+                background-image: url(./img/1.png);
+                background-size: cover;
+                /* box-shadow: x y b s c; */
+                box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+                position: relative;
+                overflow: hidden;
+                float: left;
+                margin: 12px;
+            }
 
-        .overlay {
-            background: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: -212px;
-            left: 0px;
-            transition-property: all;
-            transition-duration: 0.4s;
-            transition-timing-function: ease-in-out;
-        }
+            .overlay {
+                background: rgba(0, 0, 0, 0.5);
+                position: absolute;
+                top: -212px;
+                left: 0px;
+                transition-property: all;
+                transition-duration: 0.4s;
+                transition-timing-function: ease-in-out;
+            }
 
-        /* desendent selector
+            /* desendent selector
         p c{
 
             } */
-        .box:hover .overlay {
-            top: 0px;
-        }
+            .box:hover .overlay {
+                top: 0px;
+            }
 
-        /* 
+            /* 
         Direct Child Selector
         p > a{
         }
          */
-        .overlay>a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            border-radius: 50px;
-            background: #fff;
-            text-align: center;
-            position: absolute;
-            top: 90px;
-            left: 90px;
-            color: #464646;
-        }
+            .overlay>a {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 50px;
+                background: #fff;
+                text-align: center;
+                position: absolute;
+                top: 90px;
+                left: 90px;
+                color: #464646;
+            }
 
-        .banchor {
-            left: 140px !important;
+            .banchor {
+                left: 140px !important;
 
-        }
+            }
 
-        .overlay5 {
-            top: 0px;
-            opacity: 0;
-            transition-duration: 0.2s;
-        }
+            .overlay5 {
+                top: 0px;
+                opacity: 0;
+                transition-duration: 0.2s;
+            }
 
-        .box:hover>.overlay5 {
-            opacity: 1;
-        }
+            .box:hover>.overlay5 {
+                opacity: 1;
+            }
 
-        .a5_1 {
-            left: 50px !important;
-        }
+            .a5_1 {
+                left: 50px !important;
+            }
 
-        .a5_2 {
-            left: 180px !important;
-        }
+            .a5_2 {
+                left: 180px !important;
+            }
 
-        .box:hover>.overlay5 .a5_1 {
-            left: 90px !important;
-        }
+            .box:hover>.overlay5 .a5_1 {
+                left: 90px !important;
+            }
 
-        .box:hover>.overlay5 .a5_2 {
-            left: 140px !important;
-        }
+            .box:hover>.overlay5 .a5_2 {
+                left: 140px !important;
+            }
 
-        .a5_1,
-        .a5_2 {
-            /* transition: property duration timing-function delay|initial|inherit*/
-            transition: all 0.1s liner;
-        }
-    </style>
-</head>
+            .a5_1,
+            .a5_2 {
+                /* transition: property duration timing-function delay|initial|inherit*/
+                transition: all 0.1s liner;
+            }
 
-<body>
+            .a7_1,
+            .a7_2 {
+                /* STEP-1 */
+                transform: scale(1.5, 1.5);
+                transition: all 0.1s linear;
+            }
 
-</body>
-<div class="common box">
-    <div class="common overlay ">
-        <a href="#"><i class="fa-solid fa-link"></i></a>
-        <a class="banchor" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-    </div>
-</div>
-<div class="common box">
-    <div class="common overlay overlay5">
-        <a href="#" class="a5_1"><i class="fa-solid fa-link"></i></a>
-        <a class="banchor a5_2" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-    </div>
-</div>
+            .box:hover .a7_1,
+            .box:hover .a7_2 {
+                /* STEP-2 */
+                transform: scale(1, 1);
+            }
 
-</html>
+            .a9_2 {
+                transform: scale(0, 0);
+                transition: all 0.1s linear;
+            }
+
+            .box:hover .a9_2 {
+                transform: scale(1, 1);
+            }
+
+            .a9_1 {
+                transform-origin: 62px center;
+                transform: rotateZ(0deg) scale(0, 0);
+                transition: all 1s linear;
+            }
+
+            .box:hover .a9_1 {
+                transform: rotateZ(360deg) scale(1, 1);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="common box">
+            <div class="common overlay ">
+                <a href="#"><i class="fas fa-link"></i></a>
+                <a class="banchor" href="#"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+        <div class="common box">
+            <div class="common overlay overlay5">
+                <a href="#" class="a5_1"><i class="fas fa-link"></i></a>
+                <a class="banchor a5_2" href="#"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+        <div class="common box">
+            <div class="common overlay overlay5 overlay7">
+                <a href="#" class="a7_1"><i class="fas fa-link"></i></a>
+                <a class="banchor a7_2" href="#"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+        <div class="common box">
+            <div class="common overlay overlay5 overlay9">
+                <a href="#" class="a9_1"><i class="fas fa-link"></i></a>
+                <a class="banchor a9_2" href="#"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+    </body>
+
+    </html>
